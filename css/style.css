@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /* ==========================================
-   全体基本設定
+   全体基本設定（クール＆スタイリッシュフォント）
    ========================================== */
 * {
   box-sizing: border-box;
@@ -10,10 +10,12 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", MeiYo, sans-serif;
-  background-color: #FAF7F2; /* 優しいオフホワイト背景 */
-  color: #222222;
-  line-height: 1.7;
+  font-family: 'Montserrat', 'Noto Sans JP', -apple-system, sans-serif;
+  background-color: #FAF8F5; /* 落ち着いた柔らかい背景 */
+  color: #111111;
+  line-height: 1.75;
+  letter-spacing: 0.03em;
+  -webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -27,7 +29,7 @@ a {
   text-decoration: none;
 }
 
-/* サイト全体をまとめる中央揃え枠 (Canvaの見た目を完全再現) */
+/* サイト幅（縦一列に統一） */
 .site-wrapper {
   max-width: 480px;
   margin: 0 auto;
@@ -39,22 +41,24 @@ a {
    ========================================== */
 .hero {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .hero .subtitle {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #111;
-  letter-spacing: 0.02em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 0.05em;
 }
 
 .hero .main-title {
+  font-family: 'Noto Sans JP', sans-serif;
   font-size: 2.2rem;
-  font-weight: 800;
+  font-weight: 900;
   color: #000;
-  margin: 4px 0 16px;
-  letter-spacing: 0.05em;
+  margin: 2px 0 16px;
+  letter-spacing: 0.08em;
 }
 
 .hero .main-img img {
@@ -70,17 +74,18 @@ a {
 }
 
 .intro-title {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.5;
-  margin-bottom: 12px;
-  color: #111;
+  margin-bottom: 14px;
+  color: #000;
 }
 
 .intro .desc {
   font-size: 0.88rem;
   color: #333;
   margin-bottom: 20px;
+  font-weight: 400;
 }
 
 .sub-images {
@@ -97,7 +102,6 @@ a {
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  border: 1px solid #e0e0e0;
 }
 
 .support-text {
@@ -106,23 +110,24 @@ a {
   margin-bottom: 24px;
 }
 
-/* お問い合わせボックス共通 */
+/* コンタクト（メール） */
 .contact-box {
   margin-top: 10px;
 }
 
 .contact-title {
   font-size: 0.9rem;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 6px;
 }
 
 .email-link {
+  font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 1.05rem;
+  font-weight: 700;
   color: #000;
   border-bottom: 2px solid #000;
   padding-bottom: 2px;
@@ -130,44 +135,44 @@ a {
 }
 
 .email-link:hover {
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 /* ==========================================
-   プログラムボタン
+   プログラムボタン（クールなデザイン）
    ========================================== */
 .programs {
-  margin-bottom: 40px;
+  margin-bottom: 44px;
 }
 
 .section-label {
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.85rem;
-  font-weight: bold;
-  color: #666;
-  letter-spacing: 0.05em;
+  font-weight: 800;
+  color: #555;
+  letter-spacing: 0.1em;
   margin-bottom: 12px;
 }
 
-/* 上品で統一感のあるカード型ボタン */
 .btn-program {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 14px 20px;
-  background-color: #FAF7F2;
-  border: 1.5px solid #2C3E50; /* 落ち着いたダークトーン枠 */
-  border-radius: 12px;
+  padding: 15px 20px;
+  background-color: #FAF8F5;
+  border: 1.5px solid #111;
+  border-radius: 10px;
   font-size: 1.05rem;
   font-weight: 700;
-  color: #2C3E50;
+  color: #111;
   margin-bottom: 12px;
   transition: all 0.2s ease;
 }
 
 .btn-program:hover {
-  background-color: #2C3E50;
-  color: #ffffff;
+  background-color: #111;
+  color: #fff;
 }
 
 /* ==========================================
@@ -192,7 +197,7 @@ a {
   margin-bottom: 24px;
 }
 
-/* 4つのサポート領域 grid */
+/* 4つのサポートカード */
 .grid-support {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -208,14 +213,13 @@ a {
   width: 100%;
   height: 120px;
   object-fit: cover;
-  border: 1px solid #ddd;
 }
 
 .support-card p {
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-top: 6px;
-  color: #222;
+  color: #111;
 }
 
 .service-footer-text {
@@ -243,14 +247,14 @@ a {
 }
 
 .profile-name {
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: 800;
   margin-bottom: 16px;
 }
 
 .profile-name .ja {
   font-size: 0.95rem;
-  font-weight: normal;
+  font-weight: 500;
 }
 
 .profile-contact {
@@ -273,8 +277,9 @@ a {
 }
 
 .blog-icon {
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.65rem;
-  font-weight: bold;
+  font-weight: 800;
   color: #000;
   border: 1.5px solid #000;
   border-radius: 50%;
@@ -294,12 +299,15 @@ a {
 }
 
 .footer-title {
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.3rem;
-  font-weight: bold;
+  font-weight: 800;
   margin-bottom: 4px;
+  letter-spacing: 0.05em;
 }
 
 .copyright {
+  font-family: 'Montserrat', sans-serif;
   font-size: 0.65rem;
   color: #aaaaaa;
 }

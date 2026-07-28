@@ -4,9 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Presented by Jajamama - ロサンゼルス留学</title>
-  <link rel="stylesheet" href="css/style.css">
-  <!-- FontAwesome (メール・SNSアイコン用) -->
+  
+  <!-- フォント指定（Montserrat + Noto Sans JP） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome (アイコン) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -70,7 +76,8 @@
     <!-- サポート実績・案内 -->
     <section class="services">
       <div class="group-img">
-        <img src="images/group.jpg" alt="留学サポートの様子">
+        <!-- ※group.jpgをimagesフォルダに追加してください（未追加の場合はhero.jpgが表示されます） -->
+        <img src="images/group.jpg" onerror="this.src='images/hero.jpg';" alt="留学サポートの様子">
       </div>
       <p class="service-desc">
         2025年から、スケートボードに限らず、幅広いジャンルで留学をサポート。英語学習、ダンス留学、親子留学、30歳以上の大人の留学など、さまざまなプランをご提供しています。Kyoko Hicks自身の45才からのアメリカ語学留学の経験、また息子のカナダ高校留学の経験もシェアしながらサポートします。
@@ -79,19 +86,19 @@
       <!-- 4つのサポート領域 -->
       <div class="grid-support">
         <div class="support-card">
-          <img src="images/support-school.jpg" alt="学校選び">
+          <img src="images/support-school.jpg" onerror="this.src='images/kyoko1.jpg';" alt="学校選び">
           <p>学校選び</p>
         </div>
         <div class="support-card">
-          <img src="images/support-visa.jpg" alt="学生ビザサポート">
+          <img src="images/support-visa.jpg" onerror="this.src='images/kyoko2.jpg';" alt="学生ビザサポート">
           <p>学生ビザサポート</p>
         </div>
         <div class="support-card">
-          <img src="images/support-local.jpg" alt="現地サポート">
+          <img src="images/support-local.jpg" onerror="this.src='images/kyoko1.jpg';" alt="現地サポート">
           <p>現地サポート</p>
         </div>
         <div class="support-card">
-          <img src="images/support-housing.jpg" alt="ハウジング">
+          <img src="images/support-housing.jpg" onerror="this.src='images/kyoko2.jpg';" alt="ハウジング">
           <p>ハウジング</p>
         </div>
       </div>
@@ -104,7 +111,7 @@
     <!-- プロフィール -->
     <section class="profile">
       <div class="profile-img">
-        <img src="images/kyoko-profile.jpg" alt="Kyoko Hicks">
+        <img src="images/kyoko-profile.jpg" onerror="this.src='images/hero.jpg';" alt="Kyoko Hicks">
       </div>
       <h3 class="profile-name">
         Kyoko Hicks <span class="ja">（キョーコ・ヒックス）</span>
