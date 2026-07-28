@@ -1,332 +1,280 @@
-*{
+@charset "UTF-8";
 
-margin:0;
-
-padding:0;
-
-box-sizing:border-box;
-
+/* ==========================================
+   Base Styles
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-
-font-family:"Yu Gothic",sans-serif;
-
-background:#faf8f4;
-
-color:#333;
-
+body {
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", MeiYo, sans-serif;
+  background-color: #FAF8EE; /* 背景の生成り色 */
+  color: #222;
+  line-height: 1.6;
 }
 
-.hero{
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-max-width:1200px;
-
-margin:auto;
-
-padding:80px 40px;
-
-gap:60px;
-
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-.hero-text{
-
-width:45%;
-
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.logo{
-
-letter-spacing:3px;
-
-font-size:14px;
-
-color:#777;
-
-margin-bottom:20px;
-
+/* コンテナ設定（中心寄せ＆スマホ幅ベース） */
+.container {
+  max-width: 500px; /* 画像デザインに合わせたスリム幅 */
+  margin: 0 auto;
+  padding: 30px 20px 50px;
 }
 
-h1{
-
-font-size:56px;
-
-line-height:1.2;
-
-margin-bottom:30px;
-
+/* ==========================================
+   Hero Section
+   ========================================== */
+.hero {
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-.lead {
-    font-size: 32px;
-    line-height: 1.5;
-    margin-bottom: 25px;
-    color: #4a3b2c;
-    font-weight: 600;
+.hero .subtitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
-.catch {
-    font-size: 18px;
-    line-height: 2;
-    margin-bottom: 40px;
-    color: #555;
+.hero .main-title {
+  font-size: 2.3rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin: 2px 0 15px;
 }
 
-.btn{
-
-display:inline-block;
-
-padding:18px 40px;
-
-background:#b88c4a;
-
-color:white;
-
-text-decoration:none;
-
-border-radius:50px;
-
-transition:.3s;
-
+.hero .main-img img {
+  width: 100%;
+  border-radius: 4px;
 }
 
-.btn:hover{
-
-background:#8e6a37;
-
+/* ==========================================
+   Intro Section
+   ========================================== */
+.intro {
+  margin-bottom: 40px;
 }
 
-.hero-image{
-
-width:55%;
-
+.intro h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.4;
+  margin-bottom: 12px;
 }
 
-.hero-image img{
-
-width:100%;
-
-border-radius:20px;
-
-box-shadow:0 20px 40px rgba(0,0,0,.15);
-
+.intro .desc {
+  font-size: 0.85rem;
+  color: #333;
+  margin-bottom: 15px;
 }
 
-@media(max-width:900px){
-
-.hero{
-
-flex-direction:column;
-
-padding:40px 20px;
-
+.sub-images {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
 }
 
-.hero-text{
-
-width:100%;
-
-text-align:center;
-
+.sub-images img {
+  width: 50%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid #ddd;
 }
 
-.hero-image{
-
-width:100%;
-
+.support-text {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
-h1{
-
-font-size:42px;
-
+/* コンタクト（メール）共通 */
+.contact-box, .profile-contact {
+  text-align: left;
 }
 
-}
-.program{
-
-    max-width:1000px;
-
-    margin:80px auto;
-
-    padding:0 20px;
-
+.contact-box p, .contact-label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 4px;
 }
 
-.program h2{
-
-    font-size:32px;
-
-    margin-bottom:30px;
-
+.email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+  font-weight: bold;
+  color: #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 1px;
 }
 
-.program-list{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:20px;
-
+/* ==========================================
+   Program Buttons Section
+   ========================================== */
+.programs {
+  margin-bottom: 45px;
 }
 
-.program-card{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:22px 30px;
-
-    border:2px solid #c59b6d;
-
-    border-radius:15px;
-
-    text-decoration:none;
-
-    color:#333;
-
-    font-size:22px;
-
-    font-weight:bold;
-
-    transition:.3s;
-
+.section-label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #666;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
 }
 
-.program-card:hover{
-
-    background:#c59b6d;
-
-    color:white;
-
+.btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #FAF8EE;
+  border-radius: 12px;
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  border: 1.5px solid;
+  transition: transform 0.2s, opacity 0.2s;
 }
 
-.program-card span{
-
-    font-size:30px;
-
-}
-/* ===== Kyoko メッセージ ===== */
-
-.welcome{
-
-    max-width:1100px;
-
-    margin:90px auto;
-
-    padding:0 20px;
-
-    text-align:center;
-
+.btn:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
 }
 
-.welcome h2{
+.btn-red { border-color: #B55252; color: #B55252; }
+.btn-blue { border-color: #273783; color: #273783; }
+.btn-green { border-color: #3B8251; color: #3B8251; }
+.btn-purple { border-color: #6C40B5; color: #6C40B5; }
 
-    font-size:34px;
-
-    line-height:1.5;
-
-    color:#5c4630;
-
-    margin-bottom:25px;
-
+/* ==========================================
+   Services Section
+   ========================================== */
+.services {
+  margin-bottom: 40px;
 }
 
-.welcome p{
-
-    font-size:20px;
-
-    line-height:1.8;
-
+.group-img {
+  margin-bottom: 15px;
 }
 
-.mail{
-
-    margin-top:15px;
-
-    font-size:22px;
-
+.service-desc, .service-footer-text {
+  font-size: 0.82rem;
+  color: #333;
+  margin-bottom: 20px;
 }
 
-.mail a{
-
-    color:#8b6b43;
-
-    text-decoration:none;
-
-    font-weight:bold;
-
+.grid-support {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-.mail a:hover{
-
-    text-decoration:underline;
-
+.support-card {
+  text-align: center;
 }
 
-.welcome-images{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:30px;
-
-    margin-top:40px;
-
-    flex-wrap:wrap;
-
+.support-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border: 1px solid #ccc;
 }
 
-.welcome-images img{
-
-    width:280px;
-
-    border-radius:18px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-
-    transition:.3s;
-
+.support-card p {
+  font-size: 0.8rem;
+  margin-top: 5px;
 }
 
-.welcome-images img:hover{
-
-    transform:translateY(-5px);
-
+/* ==========================================
+   Profile Section
+   ========================================== */
+.profile {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-@media(max-width:768px){
+.profile-img {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto 15px;
+}
 
-    .welcome h2{
+.profile-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
 
-        font-size:26px;
+.profile-name span {
+  font-size: 0.95rem;
+  font-weight: normal;
+}
 
-    }
+.profile .contact-label {
+  text-align: center;
+}
 
-    .welcome p{
+.profile-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 5px;
+}
 
-        font-size:18px;
+.sns-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 5px;
+}
 
-    }
+.sns-icons i {
+  font-size: 1.8rem;
+}
 
-    .welcome-images img{
+.blog-icon {
+  font-size: 0.65rem;
+  font-weight: bold;
+  border: 1.5px solid #000;
+  border-radius: 50%;
+  padding: 4px 5px;
+  line-height: 1;
+}
 
-        width:90%;
+/* ==========================================
+   Footer
+   ========================================== */
+.site-footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 25px 10px;
+}
 
-        max-width:320px;
+.footer-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
 
-    }
-
+.copyright {
+  font-size: 0.65rem;
+  color: #aaa;
 }
