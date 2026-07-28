@@ -1,27 +1,8 @@
 @charset "UTF-8";
 
 /* ==========================================
-   Design Tokens & Modern Reset
+   全体基本設定
    ========================================== */
-:root {
-  --color-bg: #FBF9F5;          /* 落ち着いた高級感のある生成り */
-  --color-surface: #FFFFFF;     /* ホワイトカード */
-  --color-primary: #1A2B4C;     /* トラディショナルネイビー (信頼・品格) */
-  --color-accent: #C89D54;      /* サンセットゴールド */
-  --color-text: #2B2D42;        /* ダークグレーテキスト */
-  --color-muted: #6C757D;       /* サブテキスト */
-  --color-border: #E5E0D8;      /* 薄い境界線 */
-  
-  --font-serif: "Noto Serif JP", serif;
-  --font-sans: "Noto Sans JP", -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-en: 'Montserrat', sans-serif;
-  
-  --shadow-sm: 0 4px 12px rgba(26, 43, 76, 0.05);
-  --shadow-md: 0 10px 30px rgba(26, 43, 76, 0.08);
-  --radius: 8px;
-  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -29,12 +10,10 @@
 }
 
 body {
-  font-family: var(--font-sans);
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.8;
-  letter-spacing: 0.02em;
-  -webkit-font-smoothing: antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", MeiYo, sans-serif;
+  background-color: #FAF7F2; /* 優しいオフホワイト背景 */
+  color: #222222;
+  line-height: 1.7;
 }
 
 img {
@@ -46,507 +25,281 @@ img {
 a {
   color: inherit;
   text-decoration: none;
-  transition: var(--transition);
 }
 
-.container {
-  max-width: 1080px;
+/* サイト全体をまとめる中央揃え枠 (Canvaの見た目を完全再現) */
+.site-wrapper {
+  max-width: 480px;
   margin: 0 auto;
-  padding: 0 24px;
-}
-
-.section {
-  padding: 80px 0;
+  padding: 40px 20px;
 }
 
 /* ==========================================
-   Header Navigation Bar
+   ヒーローエリア
    ========================================== */
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: rgba(251, 249, 245, 0.95);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--color-border);
-  padding: 16px 0;
-}
-
-.nav-container {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.brand-logo {
-  font-family: var(--font-en);
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: 0.1em;
-  color: var(--color-primary);
-}
-
-.nav-contact-btn {
-  font-size: 0.85rem;
-  font-weight: 500;
-  background-color: var(--color-primary);
-  color: #fff;
-  padding: 8px 16px;
-  border-radius: 50px;
-}
-
-.nav-contact-btn:hover {
-  background-color: var(--color-accent);
-}
-
-/* ==========================================
-   Hero Section
-   ========================================== */
-.hero-section {
-  max-width: 1080px;
-  margin: 40px auto 0;
-  padding: 0 24px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-}
-
-@media (min-width: 768px) {
-  .hero-section {
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    margin-top: 60px;
-  }
-}
-
-.hero-subtitle {
-  font-family: var(--font-en);
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--color-accent);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.hero-title {
-  font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 5vw, 3.4rem);
-  font-weight: 700;
-  color: var(--color-primary);
-  line-height: 1.25;
-  margin-bottom: 16px;
-}
-
-.hero-lead {
-  font-size: 1.05rem;
-  color: var(--color-muted);
-  font-weight: 500;
-}
-
-.hero-image-wrap {
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-}
-
-.hero-image-wrap img {
-  width: 100%;
-  height: 380px;
-  object-fit: cover;
-}
-
-/* ==========================================
-   Intro Section
-   ========================================== */
-.intro-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-@media (min-width: 768px) {
-  .intro-grid {
-    grid-template-columns: 1.2fr 0.8fr;
-  }
-}
-
-.section-title {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  color: var(--color-primary);
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
-
-.intro-text .desc {
-  font-size: 1rem;
-  margin-bottom: 16px;
-}
-
-.intro-text .support-text {
-  font-size: 0.95rem;
-  background-color: var(--color-surface);
-  padding: 20px;
-  border-left: 4px solid var(--color-accent);
-  border-radius: 0 var(--radius) var(--radius) 0;
-  box-shadow: var(--shadow-sm);
+.hero {
+  text-align: center;
   margin-bottom: 30px;
 }
 
-.contact-cta {
-  background-color: var(--color-primary);
-  color: #fff;
-  padding: 24px;
-  border-radius: var(--radius);
-  display: inline-block;
-  width: 100%;
+.hero .subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111;
+  letter-spacing: 0.02em;
 }
 
-.cta-label {
-  font-size: 0.85rem;
-  opacity: 0.8;
+.hero .main-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #000;
+  margin: 4px 0 16px;
+  letter-spacing: 0.05em;
+}
+
+.hero .main-img img {
+  width: 100%;
+  border-radius: 2px;
+}
+
+/* ==========================================
+   イントロダクション
+   ========================================== */
+.intro {
+  margin-bottom: 40px;
+}
+
+.intro-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.intro .desc {
+  font-size: 0.88rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.sub-images {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.sub-images .img-box {
+  flex: 1;
+}
+
+.sub-images img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid #e0e0e0;
+}
+
+.support-text {
+  font-size: 0.88rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+/* お問い合わせボックス共通 */
+.contact-box {
+  margin-top: 10px;
+}
+
+.contact-title {
+  font-size: 0.9rem;
+  font-weight: bold;
   margin-bottom: 6px;
 }
 
 .email-link {
-  font-family: var(--font-en);
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: #fff;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  border-bottom: 1px dashed rgba(255,255,255,0.4);
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
 }
 
 .email-link:hover {
-  color: var(--color-accent);
-  border-color: var(--color-accent);
-}
-
-.intro-gallery {
-  display: flex;
-  gap: 16px;
-}
-
-.gallery-item {
-  flex: 1;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-}
-
-.gallery-item img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  transition: var(--transition);
-}
-
-.gallery-item img:hover {
-  transform: scale(1.05);
+  opacity: 0.7;
 }
 
 /* ==========================================
-   Program Section (Buttons Redesign)
+   プログラムボタン
    ========================================== */
-.program-section {
-  background-color: var(--color-surface);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-}
-
-.section-header.center {
-  text-align: center;
+.programs {
   margin-bottom: 40px;
 }
 
-.badge {
-  font-family: var(--font-en);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  color: var(--color-accent);
-  background: rgba(200, 157, 84, 0.1);
-  padding: 4px 12px;
-  border-radius: 50px;
-  display: inline-block;
-  margin-bottom: 10px;
+.section-label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #666;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
 }
 
-.program-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 16px;
-}
-
-@media (min-width: 600px) {
-  .program-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.program-card {
-  background-color: var(--color-bg);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  padding: 24px;
-  display: block;
-}
-
-.program-card .card-body {
+/* 上品で統一感のあるカード型ボタン */
+.btn-program {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.program-card h3 {
-  font-size: 1.1rem;
+  width: 100%;
+  padding: 14px 20px;
+  background-color: #FAF7F2;
+  border: 1.5px solid #2C3E50; /* 落ち着いたダークトーン枠 */
+  border-radius: 12px;
+  font-size: 1.05rem;
   font-weight: 700;
-  color: var(--color-primary);
+  color: #2C3E50;
+  margin-bottom: 12px;
+  transition: all 0.2s ease;
 }
 
-.program-card .arrow {
-  color: var(--color-accent);
-  font-size: 1rem;
-  transition: var(--transition);
-}
-
-.program-card:hover {
-  border-color: var(--color-primary);
-  background-color: #fff;
-  box-shadow: var(--shadow-md);
-  transform: translateY(-2px);
-}
-
-.program-card:hover .arrow {
-  transform: translateX(6px);
+.btn-program:hover {
+  background-color: #2C3E50;
+  color: #ffffff;
 }
 
 /* ==========================================
-   Service & Support Section
+   サービス・サポート内容
    ========================================== */
-.service-hero {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  margin-bottom: 50px;
-  align-items: center;
-}
-
-@media (min-width: 768px) {
-  .service-hero {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.service-img-wrap {
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-}
-
-.service-img-wrap img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-.service-desc {
-  font-size: 0.95rem;
-  color: var(--color-text);
-  line-height: 1.8;
-}
-
-.support-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+.services {
   margin-bottom: 40px;
 }
 
-@media (min-width: 768px) {
-  .support-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
+.group-img {
+  margin-bottom: 16px;
+}
+
+.group-img img {
+  width: 100%;
+  border-radius: 2px;
+}
+
+.service-desc {
+  font-size: 0.85rem;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+/* 4つのサポート領域 grid */
+.grid-support {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
 }
 
 .support-card {
-  background-color: var(--color-surface);
-  border-radius: var(--radius);
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-  box-shadow: var(--shadow-sm);
   text-align: center;
-  transition: var(--transition);
 }
 
-.support-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-}
-
-.support-card .card-img img {
+.support-card img {
   width: 100%;
-  height: 150px;
+  height: 120px;
   object-fit: cover;
+  border: 1px solid #ddd;
 }
 
-.support-card h4 {
-  font-size: 0.95rem;
-  font-weight: 700;
-  padding: 12px;
-  color: var(--color-primary);
+.support-card p {
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-top: 6px;
+  color: #222;
 }
 
 .service-footer-text {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 0.95rem;
-  color: var(--color-muted);
+  font-size: 0.85rem;
+  color: #333;
 }
 
 /* ==========================================
-   Profile Section
+   プロフィール
    ========================================== */
-.profile-section {
-  background-color: var(--color-surface);
-  border-top: 1px solid var(--color-border);
+.profile {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.profile-card {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  align-items: center;
-  max-width: 800px;
-  margin: 0 auto;
-  background-color: var(--color-bg);
-  padding: 40px;
-  border-radius: var(--radius);
-  border: 1px solid var(--color-border);
+.profile-img {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto 16px;
 }
 
-@media (min-width: 600px) {
-  .profile-card {
-    grid-template-columns: 220px 1fr;
-  }
-}
-
-.profile-thumb img {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto;
-  box-shadow: var(--shadow-sm);
-  border: 4px solid #fff;
-}
-
-.profile-role {
-  font-family: var(--font-en);
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--color-accent);
-  letter-spacing: 0.15em;
+.profile-img img {
+  width: 100%;
+  border-radius: 2px;
 }
 
 .profile-name {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
-  color: var(--color-primary);
-  margin: 4px 0 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
 }
 
 .profile-name .ja {
   font-size: 0.95rem;
   font-weight: normal;
-  color: var(--color-muted);
 }
 
-.contact-label {
-  font-size: 0.85rem;
-  color: var(--color-muted);
-  margin-bottom: 12px;
-}
-
-.profile-action {
+.profile-contact {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-}
-
-.btn-primary {
-  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background-color: var(--color-primary);
-  color: #fff;
-  font-weight: 600;
-  padding: 12px 24px;
-  border-radius: var(--radius);
+  gap: 14px;
+  margin-top: 8px;
 }
 
-.btn-primary:hover {
-  background-color: var(--color-accent);
-}
-
-.sns-links {
+.sns-icons {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 14px;
 }
 
-.sns-links i {
-  font-size: 1.5rem;
-  color: var(--color-primary);
+.sns-icons i {
+  font-size: 1.8rem;
+  color: #000;
 }
 
-.sns-links i:hover {
-  color: var(--color-accent);
-}
-
-.blog-text-link {
-  font-family: var(--font-en);
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  border: 1px solid var(--color-primary);
-  padding: 2px 10px;
-  border-radius: 50px;
-  color: var(--color-primary);
-}
-
-.blog-text-link:hover {
-  background-color: var(--color-primary);
-  color: #fff;
+.blog-icon {
+  font-size: 0.65rem;
+  font-weight: bold;
+  color: #000;
+  border: 1.5px solid #000;
+  border-radius: 50%;
+  padding: 4px 6px;
+  line-height: 1;
 }
 
 /* ==========================================
-   Footer
+   フッター
    ========================================== */
 .site-footer {
-  background-color: var(--color-primary);
-  color: #fff;
+  background-color: #000000;
+  color: #ffffff;
   text-align: center;
-  padding: 40px 0;
+  padding: 30px 10px;
+  width: 100%;
 }
 
 .footer-title {
-  font-family: var(--font-en);
-  font-size: 1.2rem;
-  letter-spacing: 0.1em;
-  margin-bottom: 8px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 4px;
 }
 
 .copyright {
-  font-size: 0.75rem;
-  opacity: 0.6;
+  font-size: 0.65rem;
+  color: #aaaaaa;
 }
