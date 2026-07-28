@@ -5,188 +5,167 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ロサンゼルス留学 | Presented by Jajamama</title>
   
-  <!-- Cool Modern Fonts (Montserrat & Noto Sans JP) -->
+  <!-- クールな標準フォント (Montserrat & Noto Sans JP) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
   
-  <!-- FontAwesome Icons -->
+  <!-- FontAwesome (アイコン) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css?v=2">
+  
+  <!-- キャッシュ防止のパラメータ付与 -->
+  <link rel="stylesheet" href="css/style.css?v=4">
 </head>
 <body>
 
-  <!-- トップナビゲーションバー -->
-  <header class="navbar">
-    <div class="nav-container">
-      <div class="brand-logo">Jajamama LLC</div>
-      <a href="mailto:lask8mom@gmail.com" class="nav-btn">
-        <i class="fa-regular fa-envelope"></i> お問い合わせ
-      </a>
-    </div>
-  </header>
+  <div class="site-container">
 
-  <!-- ヒーローセクション -->
-  <section class="hero-section">
-    <div class="container">
-      <div class="hero-inner">
-        <div class="hero-text">
-          <p class="hero-sub">Presented by Jajamama</p>
-          <h1 class="hero-title">ロサンゼルス留学</h1>
-          <p class="hero-lead">夢を叶える第一歩、ロサンゼルス留学へようこそ</p>
-        </div>
-        <div class="hero-img-wrap">
-          <img src="images/hero.jpg" alt="ロサンゼルス留学 Main Image">
-        </div>
+    <!-- ヒーローエリア -->
+    <header class="hero">
+      <div class="hero-brand">
+        <span class="subtitle">Presented by Jajamama</span>
+        <h1 class="main-title">ロサンゼルス留学</h1>
+        <div class="title-line"></div>
       </div>
-    </div>
-  </section>
-
-  <main class="main-body">
-
-    <!-- イントロダクション -->
-    <section class="section intro-section">
-      <div class="container">
-        <div class="intro-box">
-          <p class="intro-desc">
-            英語学習はもちろん、映画・音楽・スポーツの"今"をロサンゼルスで。<br>語学力を伸ばしながら、アメリカ文化を体験してみませんか。
-          </p>
-
-          <div class="sub-images-grid">
-            <div class="img-card"><img src="images/kyoko1.jpg" alt="LAの様子1"></div>
-            <div class="img-card"><img src="images/kyoko2.jpg" alt="LAの様子2"></div>
-          </div>
-
-          <p class="coordinator-note">
-            LA留学の母、<strong>Kyoko Hicks</strong> が、あなたの留学プランを全力でサポートします。
-          </p>
-
-          <div class="contact-cta">
-            <span class="cta-label">お気軽にお問い合わせください</span>
-            <a href="mailto:lask8mom@gmail.com" class="email-btn">
-              <i class="fa-regular fa-envelope"></i> lask8mom@gmail.com
-            </a>
-          </div>
-        </div>
+      <div class="main-img-wrap">
+        <img src="images/hero.jpg" alt="ロサンゼルス留学">
       </div>
-    </section>
+    </header>
 
-    <!-- プログラム（PROGRAM） -->
-    <section class="section program-section">
-      <div class="container">
-        <div class="section-title-wrap">
-          <span class="badge">PROGRAM</span>
-          <h2 class="section-title">提供プログラム</h2>
-        </div>
-        
-        <div class="program-grid">
-          <a href="#" class="program-card">
-            <div class="card-content">
-              <h3>スケボー留学</h3>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-          </a>
-          <a href="#" class="program-card">
-            <div class="card-content">
-              <h3>ダンス＋語学留学</h3>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-          </a>
-          <a href="#" class="program-card">
-            <div class="card-content">
-              <h3>UCLAサマーキャンプ</h3>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-          </a>
-          <a href="#" class="program-card">
-            <div class="card-content">
-              <h3>スケボー＋語学留学</h3>
-              <i class="fa-solid fa-arrow-right"></i>
-            </div>
-          </a>
-        </div>
+    <!-- 挨拶・イントロ -->
+    <section class="card-section intro">
+      <h2 class="intro-title">夢を叶える第一歩、<br>ロサンゼルス留学へようこそ</h2>
+      <p class="desc">
+        英語学習はもちろん、映画・音楽・スポーツの"今"をロサンゼルスで。語学力を伸ばしながら、アメリカ文化を体験してみませんか。
+      </p>
+
+      <div class="sub-images">
+        <div class="img-box"><img src="images/kyoko1.jpg" alt="LAの街並み1"></div>
+        <div class="img-box"><img src="images/kyoko2.jpg" alt="LAの街並み2"></div>
       </div>
-    </section>
 
-    <!-- サービス・サポート内容 -->
-    <section class="section service-section">
-      <div class="container">
-        <div class="group-hero-img">
-          <img src="images/group.jpg" alt="留学サポートの様子">
-        </div>
-        
-        <p class="service-desc">
-          2025年から、スケートボードに限らず、幅広いジャンルで留学をサポート。英語学習、ダンス留学、親子留学、30歳以上の大人の留学など、さまざまなプランをご提供しています。Kyoko Hicks自身の45才からのアメリカ語学留学の経験、また息子のカナダ高校留学の経験もシェアしながらサポートします。
-        </p>
-
-        <!-- 4つのサポート領域 -->
-        <div class="support-grid">
-          <div class="support-card">
-            <div class="card-img-box">
-              <img src="images/support-school.jpg" alt="学校選び">
-            </div>
-            <h4>学校選び</h4>
-          </div>
-          <div class="support-card">
-            <div class="card-img-box">
-              <img src="images/support-visa.jpg" alt="学生ビザサポート">
-            </div>
-            <h4>学生ビザサポート</h4>
-          </div>
-          <div class="support-card">
-            <div class="card-img-box">
-              <img src="images/support-local.jpg" alt="現地サポート">
-            </div>
-            <h4>現地サポート</h4>
-          </div>
-          <div class="support-card">
-            <div class="card-img-box">
-              <img src="images/support-housing.jpg" alt="ハウジング">
-            </div>
-            <h4>ハウジング</h4>
-          </div>
-        </div>
-
-        <p class="service-footer-note">
-          留学前の学校選びから申し込み、ビザ取得サポート、ロサンゼルスでの生活サポートまで、現地にいるからこそできる迅速なサービスを提供いたします。
+      <div class="coordinator-box">
+        <i class="fa-solid fa-quote-left quote-icon"></i>
+        <p class="support-text">
+          LA留学の母、<strong>Kyoko Hicks</strong> が、あなたの留学プランを全力でサポートします。
         </p>
       </div>
+
+      <div class="contact-box">
+        <p class="contact-title">お気軽にお問い合わせください</p>
+        <a href="mailto:lask8mom@gmail.com" class="email-btn">
+          <i class="fa-regular fa-envelope"></i> lask8mom@gmail.com
+        </a>
+      </div>
     </section>
 
-    <!-- プロフィールセクション -->
-    <section class="section profile-section">
-      <div class="container">
-        <div class="profile-card">
-          <div class="profile-img-box">
-            <img src="images/kyoko-profile.jpg" alt="Kyoko Hicks">
+    <!-- プログラム選択ボタン -->
+    <section class="card-section programs">
+      <div class="section-header">
+        <span class="section-badge">PROGRAM</span>
+        <h2 class="section-heading">提供プログラム</h2>
+      </div>
+      
+      <div class="program-list">
+        <a href="#" class="btn-program">
+          <span class="prog-text">スケボー留学</span>
+          <span class="arrow-circle"><i class="fa-solid fa-chevron-right"></i></span>
+        </a>
+        <a href="#" class="btn-program">
+          <span class="prog-text">ダンス＋語学留学</span>
+          <span class="arrow-circle"><i class="fa-solid fa-chevron-right"></i></span>
+        </a>
+        <a href="#" class="btn-program">
+          <span class="prog-text">UCLAサマーキャンプ</span>
+          <span class="arrow-circle"><i class="fa-solid fa-chevron-right"></i></span>
+        </a>
+        <a href="#" class="btn-program">
+          <span class="prog-text">スケボー＋語学留学</span>
+          <span class="arrow-circle"><i class="fa-solid fa-chevron-right"></i></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- サポート実績・案内 -->
+    <section class="card-section services">
+      <div class="group-img-wrap">
+        <img src="images/group.jpg" alt="留学サポートの様子">
+      </div>
+      
+      <p class="service-desc">
+        2025年から、スケートボードに限らず、幅広いジャンルで留学をサポート。英語学習、ダンス留学、親子留学、30歳以上の大人の留学など、さまざまなプランをご提供しています。Kyoko Hicks自身の45才からのアメリカ語学留学の経験、また息子のカナダ高校留学の経験もシェアしながらサポートします。
+      </p>
+
+      <!-- 4つのサポート領域 -->
+      <div class="grid-support">
+        <div class="support-card">
+          <div class="card-img-holder">
+            <img src="images/support-school.jpg" alt="学校選び">
           </div>
-          <div class="profile-info">
-            <span class="role-tag">COORDINATOR</span>
-            <h3 class="profile-name">
-              Kyoko Hicks <span class="ja">（キョーコ・ヒックス）</span>
-            </h3>
-            <p class="contact-label">お気軽にお問い合わせください</p>
-            
-            <div class="profile-actions">
-              <a href="mailto:lask8mom@gmail.com" class="profile-email-btn">
-                <i class="fa-regular fa-envelope"></i> lask8mom@gmail.com
-              </a>
-              <div class="sns-links">
-                <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#" target="_blank" rel="noopener" class="blog-btn">BLOG</a>
-              </div>
-            </div>
+          <p>学校選び</p>
+        </div>
+        <div class="support-card">
+          <div class="card-img-holder">
+            <img src="images/support-visa.jpg" alt="学生ビザサポート">
           </div>
+          <p>学生ビザサポート</p>
+        </div>
+        <div class="support-card">
+          <div class="card-img-holder">
+            <img src="images/support-local.jpg" alt="現地サポート">
+          </div>
+          <p>現地サポート</p>
+        </div>
+        <div class="support-card">
+          <div class="card-img-holder">
+            <img src="images/support-housing.jpg" alt="ハウジング">
+          </div>
+          <p>ハウジング</p>
+        </div>
+      </div>
+
+      <p class="service-footer-text">
+        留学前の学校選びから申し込み、ビザ取得サポート、ロサンゼルスでの生活サポートまで、現地にいるからこそできる迅速なサービスを提供いたします。
+      </p>
+    </section>
+
+    <!-- プロフィール -->
+    <section class="card-section profile">
+      <div class="profile-header">
+        <div class="profile-img-wrap">
+          <img src="images/kyoko-profile.jpg" alt="Kyoko Hicks">
+        </div>
+        <div class="profile-titles">
+          <span class="role-badge">COORDINATOR</span>
+          <h3 class="profile-name">Kyoko Hicks</h3>
+          <p class="profile-ja">キョーコ・ヒックス</p>
+        </div>
+      </div>
+
+      <div class="profile-body">
+        <p class="contact-title">お気軽にお問い合わせください</p>
+        
+        <a href="mailto:lask8mom@gmail.com" class="email-btn full-btn">
+          <i class="fa-regular fa-envelope"></i> lask8mom@gmail.com
+        </a>
+
+        <div class="sns-row">
+          <a href="#" target="_blank" rel="noopener" class="sns-btn insta" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" target="_blank" rel="noopener" class="sns-btn blog">
+            BLOG
+          </a>
         </div>
       </div>
     </section>
 
-  </main>
+  </div>
 
   <!-- フッター -->
   <footer class="site-footer">
-    <div class="container">
-      <h2 class="footer-brand">Jajamama LLC</h2>
+    <div class="footer-inner">
+      <p class="footer-title">Jajamama LLC</p>
       <p class="copyright">Copyright 2026 Jajamama LLC. All Rights Reserved.</p>
     </div>
   </footer>
