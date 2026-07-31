@@ -13,8 +13,8 @@
   <!-- FontAwesome (アイコン) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- 共通スタイルの読み込み（一つ上の階層を参照） -->
-  <link rel="stylesheet" href="../css/style.css?v=8">
+  <!-- 共通スタイルの読み込み -->
+  <link rel="stylesheet" href="css/style.css?v=8">
   
   <style>
     /* スケボーページ専用の追加・微調整スタイル */
@@ -106,17 +106,6 @@
       margin-bottom: 48px;
     }
 
-    .back-home {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: #1E40AF;
-      margin-bottom: 24px;
-    }
-
     /* 長方形プロフィール写真の調整 */
     .profile-img-rect {
       max-width: 280px;
@@ -130,23 +119,37 @@
       height: auto;
       display: block;
     }
+
+    /* 既存サイト風のフッターHOMEボタン */
+    .btn-home-footer {
+      display: inline-block;
+      background-color: #333333;
+      color: #FFFFFF;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      padding: 8px 24px;
+      border-radius: 6px;
+      border: 1px solid #555555;
+      text-decoration: none;
+      margin-top: 12px;
+      margin-bottom: 16px;
+      transition: background-color 0.2s;
+    }
+    .btn-home-footer:hover {
+      background-color: #555555;
+    }
   </style>
 </head>
 <body>
 
   <div class="site-container">
 
-    <!-- ホームに戻るリンク（階層に合わせて ../index.html に変更） -->
-    <a href="../index.html" class="back-home">
-      <i class="fa-solid fa-chevron-left"></i> HOME
-    </a>
-
-    <!-- ヒーローエリア（写真1枚目：skateboard1.jpg） -->
+    <!-- ヒーローエリア（写真1枚目） -->
     <header class="hero">
       <p class="subtitle">Presented by Jajamama</p>
       <h1 class="main-title" style="letter-spacing: -0.02em;">SKATEBOARD<br>留学 in LA</h1>
       <div class="main-img">
-        <img src="../images/programs/skateboard1.jpg" alt="SKATEBOARD 留学 in LA">
+        <img src="images/programs/skateboard1.jpg" alt="SKATEBOARD 留学 in LA">
       </div>
     </header>
 
@@ -158,7 +161,7 @@
       </p>
     </section>
 
-    <!-- 1. スケジュール（写真2枚目＆3枚目：skateboard2.jpg / skateboard3.jpg） -->
+    <!-- 1. スケジュール（写真2枚目＆3枚目） -->
     <section class="page-section">
       <p class="section-label">SCHEDULE</p>
       <h2 class="intro-title">スケジュール</h2>
@@ -177,8 +180,8 @@
       </table>
 
       <div class="sub-images" style="margin-top: 24px;">
-        <div class="img-box"><img src="../images/programs/skateboard2.jpg" alt="スケートパークでの様子1"></div>
-        <div class="img-box"><img src="../images/programs/skateboard3.jpg" alt="スケートパークでの様子2"></div>
+        <div class="img-box"><img src="images/programs/skateboard2.jpg" alt="スケートパークでの様子1"></div>
+        <div class="img-box"><img src="images/programs/skateboard3.jpg" alt="スケートパークでの様子2"></div>
       </div>
     </section>
 
@@ -209,7 +212,7 @@
       </div>
     </section>
 
-    <!-- 3. 参加資格（写真4枚目：skateboard4.jpg） -->
+    <!-- 3. 参加資格（写真4枚目） -->
     <section class="page-section">
       <p class="section-label">ELIGIBILITY</p>
       <h2 class="intro-title">参加資格</h2>
@@ -217,7 +220,7 @@
         身の回りのことをご自身でできる方であれば、大人でも子供でもご参加いただけます。親子での参加も受付ています。
       </p>
       <div class="main-img" style="margin-top: 16px;">
-        <img src="../images/programs/skateboard4.jpg" alt="参加資格・ビーチでの写真" style="border-radius: 8px;">
+        <img src="images/programs/skateboard4.jpg" alt="参加資格・ビーチでの写真" style="border-radius: 8px;">
       </div>
     </section>
 
@@ -240,11 +243,11 @@
       </div>
     </section>
 
-    <!-- コーディネーター（プロフィール写真：kyoko-profile2.jpg ※長方形） -->
+    <!-- コーディネーター（プロフィール写真：長方形） -->
     <section class="profile">
       <p class="section-label" style="text-align: center;">COORDINATOR</p>
       <div class="profile-img-rect">
-        <img src="../images/kyoko-profile2.jpg" alt="Kyoko Hicks">
+        <img src="images/kyoko-profile2.jpg" alt="Kyoko Hicks">
       </div>
       <h3 class="profile-name">
         Kyoko Hicks <span class="ja">（キョーコ・ヒックス）</span>
@@ -267,9 +270,12 @@
       </div>
     </section>
 
-    <!-- フッター -->
+    <!-- フッター（一番下にHOMEボタンを配置） -->
     <footer class="site-footer">
       <p class="footer-title">Jajamama LLC</p>
+      <div>
+        <a href="index.html" class="btn-home-footer">Home</a>
+      </div>
       <p class="copyright">Copyright 2026 Jajamama LLC. All Rights Reserved.</p>
     </footer>
 
