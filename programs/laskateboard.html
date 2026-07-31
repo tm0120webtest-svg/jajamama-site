@@ -13,8 +13,8 @@
   <!-- FontAwesome (アイコン) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   
-  <!-- 共通スタイルの読み込み -->
-  <link rel="stylesheet" href="../css/style.css">
+  <!-- 共通スタイルの読み込み（一つ上の階層を参照） -->
+  <link rel="stylesheet" href="../css/style.css?v=8">
   
   <style>
     /* スケボーページ専用の追加・微調整スタイル */
@@ -74,7 +74,7 @@
       color: #334155;
     }
 
-    /* 地図埋め込み枠のスタイル */
+    /* Googleマップ埋め込み枠 */
     .map-container {
       width: 100%;
       margin: 12px 0 16px;
@@ -116,23 +116,37 @@
       color: #1E40AF;
       margin-bottom: 24px;
     }
+
+    /* 長方形プロフィール写真の調整 */
+    .profile-img-rect {
+      max-width: 280px;
+      margin: 0 auto 16px;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid #E2E8F0;
+    }
+    .profile-img-rect img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
   </style>
 </head>
 <body>
 
   <div class="site-container">
 
-    <!-- ホームに戻るリンク -->
-    <a href="index.html" class="back-home">
+    <!-- ホームに戻るリンク（階層に合わせて ../index.html に変更） -->
+    <a href="../index.html" class="back-home">
       <i class="fa-solid fa-chevron-left"></i> HOME
     </a>
 
-    <!-- ヒーローエリア -->
+    <!-- ヒーローエリア（写真1枚目：skateboard1.jpg） -->
     <header class="hero">
       <p class="subtitle">Presented by Jajamama</p>
       <h1 class="main-title" style="letter-spacing: -0.02em;">SKATEBOARD<br>留学 in LA</h1>
       <div class="main-img">
-        <img src="images/skate-hero.jpg" alt="SKATEBOARD 留学 in LA">
+        <img src="../images/programs/skateboard1.jpg" alt="SKATEBOARD 留学 in LA">
       </div>
     </header>
 
@@ -144,7 +158,7 @@
       </p>
     </section>
 
-    <!-- 1. スケジュール -->
+    <!-- 1. スケジュール（写真2枚目＆3枚目：skateboard2.jpg / skateboard3.jpg） -->
     <section class="page-section">
       <p class="section-label">SCHEDULE</p>
       <h2 class="intro-title">スケジュール</h2>
@@ -163,8 +177,8 @@
       </table>
 
       <div class="sub-images" style="margin-top: 24px;">
-        <div class="img-box"><img src="images/skate-sub1.jpg" alt="スケートパークでの様子1"></div>
-        <div class="img-box"><img src="images/skate-sub2.jpg" alt="スケートパークでの様子2"></div>
+        <div class="img-box"><img src="../images/programs/skateboard2.jpg" alt="スケートパークでの様子1"></div>
+        <div class="img-box"><img src="../images/programs/skateboard3.jpg" alt="スケートパークでの様子2"></div>
       </div>
     </section>
 
@@ -195,7 +209,7 @@
       </div>
     </section>
 
-    <!-- 3. 参加資格 -->
+    <!-- 3. 参加資格（写真4枚目：skateboard4.jpg） -->
     <section class="page-section">
       <p class="section-label">ELIGIBILITY</p>
       <h2 class="intro-title">参加資格</h2>
@@ -203,7 +217,7 @@
         身の回りのことをご自身でできる方であれば、大人でも子供でもご参加いただけます。親子での参加も受付ています。
       </p>
       <div class="main-img" style="margin-top: 16px;">
-        <img src="images/skate-eligibility.jpg" alt="参加資格・ビーチでの写真" style="border-radius: 8px;">
+        <img src="../images/programs/skateboard4.jpg" alt="参加資格・ビーチでの写真" style="border-radius: 8px;">
       </div>
     </section>
 
@@ -226,11 +240,11 @@
       </div>
     </section>
 
-    <!-- コーディネーター（プロフィール） -->
+    <!-- コーディネーター（プロフィール写真：kyoko-profile2.jpg ※長方形） -->
     <section class="profile">
       <p class="section-label" style="text-align: center;">COORDINATOR</p>
-      <div class="profile-img">
-        <img src="images/kyoko-profile.jpg" alt="Kyoko Hicks">
+      <div class="profile-img-rect">
+        <img src="../images/kyoko-profile2.jpg" alt="Kyoko Hicks">
       </div>
       <h3 class="profile-name">
         Kyoko Hicks <span class="ja">（キョーコ・ヒックス）</span>
