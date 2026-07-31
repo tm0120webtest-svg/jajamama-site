@@ -34,7 +34,7 @@ a {
    ========================================== */
 .site-container {
   width: 100%;
-  max-width: 1000px; /* PC画面では1000pxまで広げて優雅に表示 */
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px 16px;
   background-color: #FFFFFF;
@@ -174,7 +174,7 @@ a {
 }
 
 /* ==========================================
-   3. プログラムボタン（PCでは2×2グリッド）
+   3. プログラムボタン（2列×2行グリッド配置）
    ========================================== */
 .programs {
   margin-bottom: 48px;
@@ -189,10 +189,15 @@ a {
   margin-bottom: 12px;
 }
 
+/* 常に2列×2行で並ぶレイアウト */
+.programs-grid-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
 @media (min-width: 768px) {
   .programs-grid-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 16px;
   }
 }
@@ -202,15 +207,21 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 18px 24px;
+  padding: 16px 14px;
   background-color: #FFFFFF;
   border: 1.5px solid #CBD5E1;
   border-radius: 8px;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #0F172A;
-  margin-bottom: 12px;
   transition: all 0.25s ease;
+}
+
+@media (min-width: 768px) {
+  .btn-program {
+    padding: 18px 24px;
+    font-size: 1.05rem;
+  }
 }
 
 .btn-program:hover {
@@ -253,7 +264,7 @@ a {
 
 @media (min-width: 768px) {
   .grid-support {
-    grid-template-columns: repeat(4, 1fr); /* PC時は4つ並び */
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
