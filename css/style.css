@@ -174,7 +174,7 @@ a {
 }
 
 /* ==========================================
-   3. プログラムボタン（2列×2行グリッド配置）
+   3. プログラムボタン（スマホ：1列 / PC：2列×2行）
    ========================================== */
 .programs {
   margin-bottom: 48px;
@@ -189,15 +189,18 @@ a {
   margin-bottom: 12px;
 }
 
-/* 常に2列×2行で並ぶレイアウト */
+/* スマホ等（幅767px以下）では縦1列にして1行で綺麗に見せる */
 .programs-grid-wrap {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 
+/* PC・タブレット（幅768px以上）では2列×2行に並べる */
 @media (min-width: 768px) {
   .programs-grid-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 }
@@ -207,14 +210,15 @@ a {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 16px 14px;
+  padding: 16px 20px;
   background-color: #FFFFFF;
   border: 1.5px solid #CBD5E1;
   border-radius: 8px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 700;
   color: #0F172A;
   transition: all 0.25s ease;
+  white-space: nowrap;
 }
 
 @media (min-width: 768px) {
